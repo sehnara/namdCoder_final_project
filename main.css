@@ -72,7 +72,45 @@ body{
   color: yellow;
   background: rgba(1,2,3,0.4);
   animation: fadeIn .5s ease-in;  
+  
 }
 
+/* header */
+.tasks{
+  display: flex;
+  justify-content: center;
+  
+  z-index: 4;
+  width: 500px;
+  margin: auto;
+}
+
+.pending{
+  margin:0 ;
+  border: 1px solid orangered;
+  width: 100px;
+  height: 60px;
+  border-radius: 50px;
+
+  cursor: pointer;
+  z-index: 5;
+  text-align: center;
+  line-height: 60px;
+  margin-right: 50px;
+  margin-top: 30px;
+}
+.finished{
+  margin:0 ;
+  border: 1px solid orangered;
+  width: 100px;
+  height: 60px;
+  border-radius: 50px;
+
+  cursor: pointer;
+  z-index: 5;
+  text-align: center;
+  line-height: 60px;
+  margin-top: 30px;
+}
 
 
