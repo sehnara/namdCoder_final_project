@@ -1,0 +1,11 @@
+.clock{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+h1{  
+  font-size: 250px;
+  text-align: center;  
+  font-family: 'Coda Caption', sans-serif;
+}
