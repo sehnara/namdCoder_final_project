@@ -1,92 +1,104 @@
 /* clock */
 
-*{
-  font-family: 'Lato', sans-serif;
-}
-.clock{
-  
-}
-h1{  
-  font-size: 150px;
-  text-align: center;  
-  font-family: 'Coda Caption', sans-serif;
-  color:rgb(255, 231, 130); 
-  
-  margin:0;    
+* {
+  font-family: "Lato", sans-serif;
+  list-style-type: none;
 }
 
-body{    
-  background-color: rgb(0, 21, 37);     
+.clock {
+}
+
+h1 {
+  font-size: 150px;
+  text-align: center;
+  font-family: "Coda Caption", sans-serif;
+  color: rgb(206, 243, 245);
+
+  margin: 0;
+  margin-top: 150px;
+}
+
+body {
+  background-color: rgb(0, 21, 37);
 }
 
 /* 배경 이미지 */
 
 @keyframes fadeIn {
-  from{
-    opacity: 0;    
+  from {
+    opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
 
-.bgImage{
+.bgImage {
   position: absolute;
   width: 100%;
   height: 100%;
-  top:0;
+  top: 0;
   left: 0;
-  z-index: -1;  
-  animation: fadeIn .5s linear;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
 }
 
 /* to do list */
-.toDoList{  
+.toDoList {
   width: 400px;
   height: 100px;
-  margin : auto;
-  text-align: center;  
-}
-.toDoList p{
-  text-align: center; 
-  font-size: 20px; 
-  color: aliceblue;
-  margin-top: 0;  
-}
-.inputToDos {
-  width: 300px;
-  height: 30px;  
-  margin: auto;
-  border-radius: 15px;
-  border:none;
+  margin: 0 auto;
   text-align: center;
 }
-.mission {
-  text-align: center;  
-  height: 50px;
-  width: 400px;  
-  margin: 0 auto; 
-  line-height: 50px;
+.toDoList p {
+  text-align: center;
+  font-size: 30px;
+  color: aliceblue;
+  font-family: "Coda Caption", sans-serif;
+  margin-top: 0;
 }
-.task{
-  color: yellow;
-  background: rgba(1,2,3,0.4);
-  animation: fadeIn .5s ease-in;  
-  
+.inputToDos {
+  width: 400px;
+  height: 50px;
+  /* margin: 0 auto; */
+
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.mission {
+  text-align: center;
+  height: 50px;
+  /* width: 400px; */
+  margin: 0 auto;
+  line-height: 30px;
+  /* overflow: hidden; */
+}
+.task {
+  font-family: "Coda Caption", sans-serif;
+  font-size: 24px;
+  width: 400px;
+  margin: 15px auto;
+  color: rgb(131, 255, 122);
+  background: rgba(1, 2, 3, 0.4);
+  animation: fadeIn 0.5s ease-in;
 }
 
 /* header */
-.tasks{
+.tasks {
   display: flex;
   justify-content: center;
-  
+
   z-index: 4;
   width: 500px;
   margin: auto;
 }
 
-.pending{
-  margin:0 ;
+.pending {
+  margin: 0;
   border: 1px solid orangered;
   width: 100px;
   height: 60px;
@@ -99,8 +111,8 @@ body{
   margin-right: 50px;
   margin-top: 30px;
 }
-.finished{
-  margin:0 ;
+.finished {
+  margin: 0;
   border: 1px solid orangered;
   width: 100px;
   height: 60px;
@@ -113,4 +125,81 @@ body{
   margin-top: 30px;
 }
 
+/* inputName */
+.inputName {
+  width: 400px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 40px;
 
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.name {
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(206, 243, 245);
+
+  text-align: left;
+  margin-left: 50px;
+  width: 600px;
+  /* background-color: black; */
+  margin-bottom: 0;
+  margin-top: 50px;
+}
+
+.temp {
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(206, 243, 245);
+
+  text-align: left;
+  margin-left: 50px;
+  width: 600px;
+  /* background-color: black; */
+  margin-top: 0;
+  margin-bottom: 0;
+  float: left;
+}
+
+.tasks {
+  /* border: 1px solid black; */
+  margin-top: 50px;
+
+  width: 600px;
+}
+.tasks ul {
+  margin: 0px;
+  padding: 0;
+  height: 250px;
+
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.taskList {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(131, 255, 122);
+  border-radius: 50px;
+  background-color: rgba(250, 95, 60, 1);
+
+  width: 380px;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 50px;
+}
+.tasks ul::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(1, 1, 1, 0);
+}
+.tasks::-webkit-scrollbar-thumb {
+}
+.tasks::-webkit-scrollbar-track {
+}
