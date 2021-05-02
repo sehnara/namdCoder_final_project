@@ -186,7 +186,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: rgb(131, 255, 122);
+  color: black;
   border-radius: 50px;
   background-color: rgba(250, 95, 60, 1);
 
@@ -195,6 +195,10 @@ body {
   line-height: 45px;
   padding-left: 50px;
 }
+.taskList:hover {
+  background-color: rgb(131, 255, 122);
+}
+
 .tasks ul::-webkit-scrollbar {
   width: 10px;
   background-color: rgba(1, 1, 1, 0);
@@ -202,4 +206,13 @@ body {
 .tasks::-webkit-scrollbar-thumb {
 }
 .tasks::-webkit-scrollbar-track {
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(1.2);
 }
