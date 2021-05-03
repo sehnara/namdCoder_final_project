@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const inputName = document.querySelector('.inputName');
 
 const div = document.querySelector('.mission');
