@@ -216,3 +216,10 @@ body {
 .button:hover {
   transform: scale(1.2);
 }
+
+.success {
+  color: gold;
+}
+.end {
+  color: rgb(206, 243, 245);
+}

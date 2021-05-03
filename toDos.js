@@ -5,21 +5,42 @@ const mission = document.querySelector('.mission');
 const tasks = document.querySelector('.tasks');
 const taskList = tasks.querySelector('ul');
 
+const clock1 = document.querySelector('.clock');
+const time1= clock1.querySelector('h1');
+
 let taskArr = [];
 
-// delete 기능 
-function handleDelClick(event){
+function success(){
+  time1.classList.add('success');
+  setTimeout(()=>{
+    time1.classList.remove('success')}
+    ,2000);
+}
+
+// Success 기능
+function handleScuClick(event){
   const li = event.target.parentNode;
   taskList.removeChild(li);
-  console.log(typeof li.id);
-  // console.log(type of (taskArr[0]).id);
+
+  success();
 
   const newArr = taskArr.filter((task)=>{
     return parseInt(li.id) !== task.id;
   });
 
-  console.log(taskArr);
-  console.log(newArr);
+  taskArr = newArr;
+  localStorage.setItem('TASK',JSON.stringify(taskArr));
+}
+
+// delete 기능 
+function handleDelClick(event){
+  const li = event.target.parentNode;
+  taskList.removeChild(li);
+
+  const newArr = taskArr.filter((task)=>{
+    return parseInt(li.id) !== task.id;
+  });
+
   taskArr = newArr;
   localStorage.setItem('TASK',JSON.stringify(taskArr));
 }
@@ -50,6 +71,7 @@ function makeTask(task){
   delBtn.classList.add('button');
   delBtn.addEventListener('click', handleDelClick);
   sucBtn.classList.add('button');
+  sucBtn.addEventListener('click', handleScuClick);
   li.appendChild(sucBtn);
   li.appendChild(delBtn);
   taskList.appendChild(li);
