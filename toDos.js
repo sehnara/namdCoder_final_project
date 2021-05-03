@@ -11,10 +11,13 @@ let taskArr = [];
 function handleDelClick(event){
   const li = event.target.parentNode;
   taskList.removeChild(li);
-  console.log(li.id);
+  console.log(typeof li.id);
+  // console.log(type of (taskArr[0]).id);
+
   const newArr = taskArr.filter((task)=>{
-    return task.id !== li.id
-  })
+    return parseInt(li.id) !== task.id;
+  });
+
   console.log(taskArr);
   console.log(newArr);
   taskArr = newArr;
@@ -67,18 +70,18 @@ function handleSubmit(){
   const task = input.value;  
   getTask(task);
   saveTask(task);
-  makeTask(task);
-  
+  makeTask(task);  
 
   input.value = "";
 }
 
 function init(){
-  taskArr = JSON.parse(localStorage.getItem('TASK'));  
-  if(taskArr === null){
+  const parsedArr = JSON.parse(localStorage.getItem('TASK'));  
+  if(parsedArr === null){
     taskArr = [];
   }else{    
-      taskArr.forEach(task => {
+    parsedArr.forEach(task => {
+        saveTask(task.task);
         makeTask(task.task);
       });    
   }  
