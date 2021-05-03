@@ -57,7 +57,6 @@ function loadCoords(){
 function init(){
     loadCoords();
 }
-=======
 
 const API_KEY = '6338e402a8624d753acce848f71624c8';
 const divMission = document.querySelector('.mission');
@@ -118,5 +117,4 @@ function loadCoords(){
 function init(){
     loadCoords();
 }
->>>>>>> de79b9aa56d8b8453508154fa070d6598dec16b1
 init();
