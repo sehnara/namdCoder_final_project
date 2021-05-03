@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 const API_KEY = '6338e402a8624d753acce848f71624c8';
 const divMission = document.querySelector('.mission');
 const COORDS =  'coords';
